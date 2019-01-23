@@ -49,3 +49,98 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+//Variables
+@background-color: lightgray;
+@font-family: Tahoma, Helvetica, serif;
+@height: 100%;
+@padding: 10px;
+@font-size: 4rem;
+@width: 45%;
+@flex-direction: column;
+@justify-content: center;
+@table-background-color: rgb(199, 196, 196);
+
+//Mixins
+.middle-left-right() {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+// Nested at-rule
+// @media (max-width: 500px) {
+// 		//background: @background-color;
+// 		//.middle-right;
+// 		//.middle-left-right;
+// 		flex-flow: wrap;
+// 		width: 100%;
+
+// 		flex-direction: column;
+// }
+
+.container {
+	font-size: 1.6rem;
+	padding: 10px 2% 10px 2%;
+	max-width: 880px;
+	margin: 0 auto;
+	@media (max-width: 500px) {
+		width: 100%;
+	}
+	
+		header {
+
+			@media (max-width: 500px) {
+				//background: @background-color;
+				//.middle-right;
+				//.middle-left-right;
+				//flex-flow: wrap;
+				width: 100%;
+				//flex-direction: column;
+				display: flex;
+				justify-content: center;
+				max-width: 100%;
+			}		
+
+			nav {
+
+			}
+		}
+	}
+	
+	nav {
+		display: flex;
+		justify-content: space-between;
+		width: 50%;
+		margin-left: 50%;
+		margin-bottom: 20px;
+	
+
+	@media (max-width: 500px) {
+		margin-left: 0%;
+	}		
+	
+	a {
+		text-decoration: none;
+		color: black;
+		justify-content: flex-end;
+		}
+	}
+
+	img {
+		@media (max-width: 500px) {
+			width: 100%;
+			height: auto;
+		}
+	}

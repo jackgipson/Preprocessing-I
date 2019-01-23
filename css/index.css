@@ -127,3 +127,55 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+html {
+  font-size: 62.5%;
+}
+.container {
+  font-size: 1.6rem;
+  padding: 10px 2% 10px 2%;
+  max-width: 880px;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .container {
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .container header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+  }
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin-left: 50%;
+  margin-bottom: 20px;
+}
+@media (max-width: 500px) {
+  nav {
+    margin-left: 0%;
+  }
+}
+nav a {
+  text-decoration: none;
+  color: black;
+  justify-content: flex-end;
+}
+@media (max-width: 500px) {
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
