@@ -252,15 +252,15 @@ html {
   text-align: left;
   margin-top: 20px;
 }
-.container .bottom-content table tr:nth-child(even) {
-  background-color: #f2f2f2;
-}
-.container .bottom-content table tr:nth-child(even) th {
+.container .bottom-content table .jobs td {
   font-size: 16px;
   border-top: 1px solid gray;
   vertical-align: middle;
 }
-.container .bottom-content table tr:nth-child(even) td {
+.container .bottom-content table .jobs tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.container .bottom-content table .jobs th {
   font-size: 16px;
   border-top: 1px solid gray;
   vertical-align: middle;
