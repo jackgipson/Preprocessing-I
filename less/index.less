@@ -57,3 +57,183 @@ html, body {
     height: 100%;
 }
 
+html {
+	font-size: 62.5%;
+}
+
+//Variables
+@background-color: lightgray;
+@font-family: Tahoma, Helvetica, serif;
+@height: 100%;
+@padding: 10px;
+@font-size: 4rem;
+@width: 45%;
+@flex-direction: column;
+@justify-content: center;
+@table-background-color: rgb(199, 196, 196);
+
+//Mixins
+.middle-left-right() {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.table-layout() {
+	font-size: 16px;
+	border-top: 1px solid gray;
+	vertical-align: middle;
+}
+
+.container {
+	font-size: 1.6rem;
+	padding: 10px 2% 10px 2%;
+	max-width: 880px;
+	margin: 0 auto;
+	@media (max-width: 500px) {
+		width: 100%;
+	}
+	
+	header {
+
+		@media (max-width: 500px) {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			max-width: 100%;
+		}
+	
+		nav {
+			display: flex;
+			justify-content: space-between;
+			width: 50%;
+			margin-left: 50%;
+			margin-bottom: 20px;
+	
+			@media (max-width: 500px) {
+			margin-left: 0%;
+			}
+			
+			a {
+				text-decoration: none;
+				color: black;
+				justify-content: flex-end;
+			}
+		}
+	}
+
+	.top-content {
+		background: @background-color;
+		padding: @padding;
+	
+		img {
+			@media (max-width: 500px) {
+			width: 100%;
+			height: auto;
+			}
+		}
+	
+		h1 {
+			font-size: @font-size;
+			margin-bottom: 5px;
+		}
+	
+		p {
+			margin-top: 5px;
+			margin-bottom: 30px;
+		}
+	}
+
+	.middle-section {
+		display: flex;
+		margin-top: 20px;
+
+		@media (max-width: 500px) {
+			flex-direction: column;
+			width: 200%;
+			padding: 2%;
+		}
+	
+	}
+
+	.middle-left {
+		.middle-left-right;
+		flex-flow: wrap;
+		margin-right: 40px;
+		line-height: 1.3;
+	
+		h2 {
+			font-size: 2.5rem;
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+	}
+
+	.middle-right {
+		.middle-left-right;
+
+		@media (max-width: 500px) {
+			margin-top: 20px;
+		}
+
+		h3 {
+			font-size: 1.8rem;
+			height: 45px;
+			font-weight: bold;
+		}
+		
+		table {
+
+			tr {
+				border: 1px solid gray;
+				height: 45px;
+				display: flex;
+				align-items: center;
+				padding: 10px;
+			}
+		}
+	}
+	
+	.bottom-content {
+		width: 100%;
+		margin-top: 20px;
+
+		h3 {
+			font-size: 1.8rem;
+			font-weight: bold;
+		}
+	
+		table {
+			width: 100%;
+			height: 200px;
+			margin-bottom: 20px;
+			text-align: left;
+			margin-top: 20px;
+
+			.jobs {
+
+				td {
+					.table-layout();
+				}
+
+			tr:nth-child(even) {
+				background-color: #f2f2f2;
+			}
+				th {
+					.table-layout();
+				}
+			}
+			
+		}
+	}
+	
+	footer p {
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		background-color: darkgray;
+		height: 100px;
+		color: white;
+		align-items: center;
+	}
+}
